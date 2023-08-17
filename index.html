@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind and daisy UI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geometry Genius</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Triangle card -->
+            <div class="card w-96 bg-base-100 shadow-xl hover:bg-purple-300">
+                <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 X b X h</p>
+                  <p>
+                    <input type="number" class="border bg-gray-200 text-xl w-24 px-2" placeholder="base" name="" id="triangle-base">
+                    <span class="ml-2">cm</span>
+                    <!-- triangle height -->
+                    <input type="number" class="ml-4 border bg-gray-200 text-xl w-24 px-2" placeholder="height" name="" id="triangle-height">
+                    <span class="ml-2">cm</span>
+                  </p>
+                  <p class="text-2xl">Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
+                  <div class="card-actions">
+                    <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+    </main>
+
+    <script src="script/index.js"></script>
+</body>
+</html>
